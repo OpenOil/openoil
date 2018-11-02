@@ -1,99 +1,126 @@
-Welcome to the AWS CodeStar sample web application
-==================================================
+# CoreUI Pro Bootstrap Admin Template (Ajax Version)
 
-This sample code helps get you started with a simple Node.js web application
-deployed by AWS CodeDeploy and AWS CloudFormation to an Amazon EC2 instance.
+CoreUI is meant to be the UX game changer. Pure & transparent code is devoid of redundant components, so the app is light enough to offer ultimate user experience. This means mobile devices also, where the navigation is just as easy and intuitive as on a desktop or laptop. The CoreUI Layout API lets you customize your project for almost any device – be it Mobile, Web or WebApp – CoreUI covers them all!
 
-What's Here
------------
+## Table of Contents
 
-This sample includes:
+* [Versions](#versions)
+* [Installation](#installation)
+* [Usage](#usage)
+* [What's included](#whats-included)
+* [Documentation](#documentation)
+* [Versioning](#versioning)
+* [Creators](#creators)
+* [Community](#community)
+* [License](#license)
 
-* README.md - this file
-* app.js - this file contains the code for your application
-* appspec.yml - this file is used by AWS CodeDeploy when deploying the web
-  application to EC2
-* package.json - this file contains various metadata relevant to your Node.js
-  application such as dependencies
-* public/ - this directory contains static web assets used by your application
-* scripts/ - this directory contains scripts used by AWS CodeDeploy when
-  installing and deploying your application on the Amazon EC2 instance
-* tests/ - this directory contains unit tests for your application
-* template.yml - this file contains the description of AWS resources used by AWS
-  CloudFormation to deploy your infrastructure
+## Versions
 
+CoreUI is built on top of Bootstrap 4 and supports popular frameworks.
 
-Getting Started
----------------
+* [CoreUI Pro Bootstrap Admin Template](https://github.com/coreui/coreui-pro-bootstrap-admin-template)
+* [CoreUI Pro Bootstrap Admin Template (Ajax)](https://github.com/coreui/coreui-pro-bootstrap-admin-template-ajax)
+* [CoreUI Pro Angular 2+ Admin Template](https://github.com/coreui/coreui-pro-angular-admin-template)
+* 🚧 CoreUI Pro .NET Core 2 Admin Template (Available Soon)
+* [CoreUI Pro React.js Admin Template](https://github.com/coreui/coreui-pro-react-admin-template)
+* [CoreUI Pro Vue.js Admin Template](https://github.com/coreui/coreui-pro-vue-admin-template)
 
-These directions assume you want to develop on your local computer, and not
-from the Amazon EC2 instance itself. If you're on the Amazon EC2 instance, the
-virtual environment is already set up for you, and you can start working on the
-code.
+**Only customers with [Membership Plan](https://coreui.io/pro/#buy) have access to private github repositories.**
 
-To work on the sample code, you'll need to clone your project's repository to your
-local computer. If you haven't, do that first. You can find instructions in the
-AWS CodeStar user guide.
+## CoreUI Pro
 
-1. Install Node.js on your computer.  For details on available installers visit
-   https://nodejs.org/en/download/.
+* 💪  [CoreUI Pro Bootstrap Admin Template](https://coreui.io/pro/)
+* 💪  [CoreUI Pro Bootstrap Admin Template (Ajax)](https://coreui.io/pro/)
+* 💪  [CoreUI Pro Angular Admin Template](https://coreui.io/pro/angular)
+* 💪  [CoreUI Pro React Admin Template](https://coreui.io/pro/react)
+* 💪  [CoreUI Pro Vue Admin Template](https://coreui.io/pro/vue)
 
-2. Install NPM dependencies:
+## Installation
 
-        $ npm install
+### Clone repo
 
-2. Start the development server:
+**Only customers with [Membership Plan](https://coreui.io/pro/#buy) have access to private github repository.**
 
-        $ node app.js
+``` bash
+# clone the repo
+$ git clone https://github.com/coreui/coreui-pro-bootstrap-admin-template-ajax.git my-project
 
-3. Open http://127.0.0.1:3000/ in a web browser to view your application.
+# go into app's directory
+$ cd my-project
 
-What Do I Do Next?
-------------------
+# install app's dependencies
+$ npm install
+```
 
-Once you have a virtual environment running, you can start making changes to
-the sample Node.js web application. We suggest making a small change to
-/public/index.html first, so you can see how changes pushed to your project's
-repository are automatically picked up by your project pipeline and deployed to
-the Amazon EC2 instance. (You can watch the progress on your project dashboard.)
-Once you've seen how that works, start developing your own code, and have fun!
+### Copy and Paste
 
-To run your tests locally, go to the root directory of the
-sample code and run the `npm test` command, which
-AWS CodeBuild also runs through your `buildspec.yml` file.
+Copy all your files to your project folder and then,
 
-To test your new code during the release process, modify the existing tests or
-add tests to the tests directory. AWS CodeBuild will run the tests during the
-build stage of your project pipeline. You can find the test results
-in the AWS CodeBuild console.
+``` bash
+# go into app's directory
+$ cd my-project
 
-Learn more about AWS CodeBuild and how it builds and tests your application here:
-https://docs.aws.amazon.com/codebuild/latest/userguide/concepts.html
+# install app's dependencies
+$ npm install
+```
 
-Learn more about AWS CodeStar by reading the user guide.  Ask questions or make
-suggestions on our forum.
+## Usage
 
-User Guide: http://docs.aws.amazon.com/codestar/latest/userguide/welcome.html
+``` bash
+# serve with hot reload at localhost:3000.
+$ npm run serve
 
-Forum: https://forums.aws.amazon.com/forum.jspa?forumID=248
+# build for production with minification
+$ npm run build
+```
 
-How Do I Add Template Resources to My Project?
-------------------
+## What's included
 
-To add AWS resources to your project, you'll need to edit the `template.yml`
-file in your project's repository. You may also need to modify permissions for
-your project's worker roles. After you push the template change, AWS CodeStar
-and AWS CloudFormation provision the resources for you.
+Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
 
-See the AWS CodeStar user guide for instructions to modify your template:
-https://docs.aws.amazon.com/codestar/latest/userguide/how-to-change-project#customize-project-template.html
+```
+coreui-pro-bootstrap-admin-template-ajax/
+├── build/
+├── src/
+│   ├── css/
+│   ├── img/
+│   ├── js/
+│   ├── scss/
+│   ├── vendors/
+│   ├── ...
+│   ├── index.html
+│   └── ...
+└── package.json
+```
 
-What Should I Do Before Running My Project in Production?
-------------------
+## Documentation
 
-AWS recommends you review the security best practices recommended by the framework
-author of your selected sample application before running it in production. You
-should also regularly review and apply any available patches or associated security
-advisories for dependencies used within your application.
+The documentation for the CoreUI Pro Bootstrap Admin Template is hosted at our website [CoreUI](https://coreui.io/pro/)
 
-Best Practices: https://docs.aws.amazon.com/codestar/latest/userguide/best-practices.html?icmpid=docs_acs_rm_sec
+## Versioning
+
+For transparency into our release cycle and in striving to maintain backward compatibility,CoreUI Pro Admin Template is maintained under [the Semantic Versioning guidelines](http://semver.org/).
+
+See [the Releases section of our project](https://github.com/coreui/coreui-pro-bootstrap-admin-template-ajax/releases) for changelogs for each release version.
+
+## Creators
+
+**Łukasz Holeczek**
+
+* <https://twitter.com/lukaszholeczek>
+* <https://github.com/mrholek>
+
+**Andrzej Kopański**
+
+* <https://github.com/xidedix>
+
+## Community
+
+Get updates on CoreUI's development and chat with the project maintainers and community members.
+
+- Follow [@core_ui on Twitter](https://twitter.com/core_ui).
+- Read and subscribe to [CoreUI Blog](https://coreui.ui/blog/).
+
+## Copyright and license
+
+copyright 2018 creativeLabs Łukasz Holeczek

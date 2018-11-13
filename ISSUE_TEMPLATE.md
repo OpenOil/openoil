@@ -1,6 +1,6 @@
 Before opening an issue:
 
-- [Search for duplicate or closed issues](https://github.com/coreui/coreui-pro-bootstrap-admin-template-ajax/issues?utf8=%E2%9C%93&q=is%3Aissue)
+- [Search for duplicate or closed issues](https://github.com/coreui/coreui-pro-react-admin-template-starter/issues)
 - Prepare a [reduced test case](https://css-tricks.com/reduced-test-cases/) for any bugs
 
 When asking general "how to" questions:

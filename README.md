@@ -1,10 +1,11 @@
-# CoreUI Pro Bootstrap Admin Template (Ajax Version)
+# CoreUI Pro React Admin Template Starter `v2`
 
 CoreUI is meant to be the UX game changer. Pure & transparent code is devoid of redundant components, so the app is light enough to offer ultimate user experience. This means mobile devices also, where the navigation is just as easy and intuitive as on a desktop or laptop. The CoreUI Layout API lets you customize your project for almost any device – be it Mobile, Web or WebApp – CoreUI covers them all!
 
 ## Table of Contents
 
 * [Versions](#versions)
+* [CoreUI Pro](#coreui-pro)
 * [Installation](#installation)
 * [Usage](#usage)
 * [What's included](#whats-included)
@@ -12,11 +13,9 @@ CoreUI is meant to be the UX game changer. Pure & transparent code is devoid of 
 * [Versioning](#versioning)
 * [Creators](#creators)
 * [Community](#community)
-* [License](#license)
+* [Copyright and License](#copyright-and-license)
 
 ## Versions
-
-CoreUI is built on top of Bootstrap 4 and supports popular frameworks.
 
 * [CoreUI Pro Bootstrap Admin Template](https://github.com/coreui/coreui-pro-bootstrap-admin-template)
 * [CoreUI Pro Bootstrap Admin Template (Ajax)](https://github.com/coreui/coreui-pro-bootstrap-admin-template-ajax)
@@ -43,7 +42,7 @@ CoreUI is built on top of Bootstrap 4 and supports popular frameworks.
 
 ``` bash
 # clone the repo
-$ git clone https://github.com/coreui/coreui-pro-bootstrap-admin-template-ajax.git my-project
+$ git clone https://github.com/coreui/coreui-pro-react-admin-template.git my-project
 
 # go into app's directory
 $ cd my-project
@@ -64,12 +63,26 @@ $ cd my-project
 $ npm install
 ```
 
-## Usage
+## Create React App
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+
+see also:
+[User Guide](CRA.md)
+
+### Basic usage
 
 ``` bash
-# serve with hot reload at localhost:3000.
-$ npm run serve
+# dev server  with hot reload at http://localhost:3000
+$ npm start
+```
 
+Navigate to [http://localhost:3000](http://localhost:3000). The app will automatically reload if you change any of the source files.
+
+### Build
+
+Run `build` to build the project. The build artifacts will be stored in the `build/` directory.
+
+```bash
 # build for production with minification
 $ npm run build
 ```
@@ -79,39 +92,42 @@ $ npm run build
 Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
 
 ```
-coreui-pro-bootstrap-admin-template-ajax/
-├── build/
-├── src/
-│   ├── css/
-│   ├── img/
-│   ├── js/
-│   ├── scss/
-│   ├── vendors/
-│   ├── ...
-│   ├── index.html
-│   └── ...
+CoreUI-React#v2.0.0
+├── public/          #static files
+│   ├── assets/      #assets
+│   └── index.html   #html temlpate
+│
+├── src/             #project root
+│   ├── containers/  #container source
+│   ├── scss/        #user scss/css source
+│   ├── views/       #views source
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.js
+│   ├── _nav.js      #sidebar config
+│   └── routes.js    #routes config
+│
 └── package.json
 ```
 
 ## Documentation
 
-The documentation for the CoreUI Pro Bootstrap Admin Template is hosted at our website [CoreUI](https://coreui.io/pro/)
+The documentation for the CoreUI  Admin Template is hosted at our website [CoreUI for React](https://coreui.io/react/)
+
 
 ## Versioning
 
-For transparency into our release cycle and in striving to maintain backward compatibility,CoreUI Pro Admin Template is maintained under [the Semantic Versioning guidelines](http://semver.org/).
+For transparency into our release cycle and in striving to maintain backward compatibility, CoreUI Pro Admin Template is maintained under [the Semantic Versioning guidelines](http://semver.org/).
 
-See [the Releases section of our project](https://github.com/coreui/coreui-pro-bootstrap-admin-template-ajax/releases) for changelogs for each release version.
+See [the Releases section of our project](https://github.com/coreui/coreui-pro-react-admin-template/releases) for changelogs for each release version.
 
 ## Creators
 
 **Łukasz Holeczek**
-
 * <https://twitter.com/lukaszholeczek>
 * <https://github.com/mrholek>
 
 **Andrzej Kopański**
-
 * <https://github.com/xidedix>
 
 ## Community
@@ -121,6 +137,6 @@ Get updates on CoreUI's development and chat with the project maintainers and co
 - Follow [@core_ui on Twitter](https://twitter.com/core_ui).
 - Read and subscribe to [CoreUI Blog](https://coreui.ui/blog/).
 
-## Copyright and license
+## Copyright and License
 
-copyright 2018 creativeLabs Łukasz Holeczek
+copyright 2018 creativeLabs Łukasz Holeczek.

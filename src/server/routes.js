@@ -5,6 +5,33 @@ var EM = require('./modules/email-dispatcher');
 
 module.exports = function(app) {
 
+/* REACT APP API */
+// REGISTER
+	app.post('/register',(req, res) => {
+		res.send('new user registration') ;
+	});	
+
+
+// LOGIN
+	app.post('/login',(req,res)=> {	
+		res.send('logging in')
+	});
+
+// SEARCH QUERY
+	app.post('/search',(req,res) => {
+		res.send('searching');
+	});
+
+//	SUBSCRIBE
+	app.post('/subscribe',(req,res) => {
+		res.send('subscribed')
+	});
+
+
+
+
+
+/* express router
 // main login page //
 	app.get('/', function(req, res){
 	// check if the user's credentials are saved in a cookie //
@@ -185,5 +212,5 @@ module.exports = function(app) {
 	});
 	
 	app.get('*', function(req, res) { res.render('404', { title: 'Page Not Found'}); });
-
+*/
 };

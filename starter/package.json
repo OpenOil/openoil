@@ -31,14 +31,17 @@
     "webpack-dev-server": "2.9.7"
   },
   "dependencies": {
+    "bcrypt": "^3.0.2",
     "bootstrap": "4.0.0-beta.3",
     "chart.js": "^2.7.3",
     "codemirror": "5.33.0",
     "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "flag-icon-css": "2.9.0",
     "font-awesome": "^4.7.0",
     "history": "4.7.2",
+    "mongoose": "^5.3.15",
     "react": "16.2.0",
     "react-addons-shallow-compare": "15.6.2",
     "react-big-calendar": "0.17.0",
@@ -57,7 +60,10 @@
     "react-transition-group": "2.2.1",
     "reactstrap": "5.0.0-alpha.4",
     "simple-line-icons": "^2.4.1",
-    "spinkit": "1.2.5"
+    "spinkit": "1.2.5",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.3",
+    "whatwg-fetch": "^3.0.0"
   },
   "scripts": {
     "server": "nodemon server/index.js",

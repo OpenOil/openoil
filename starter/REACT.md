@@ -1,6 +1,6 @@
 # React version
 
-## Intro 
+## Intro
 
 It uses Sass (with .scss). The style is loaded at the component level.
 
@@ -21,14 +21,17 @@ public/img (images)
 
 ## Sctipts
 
-**npm start** for developing (it runs webpack-dev-server)
+**npm start** for developing (runs server & client)
+
+**npm run server** runs express server
+
+**npm run client** runs webpack-dev-server
 
 **npm run build** to run a dev build
 
 **npm run clean** to clean build dir
 
-**npm run dev** to run a dev build with watching filesystem for changes 
-
+**npm run dev** to run a dev build with watching filesystem for changes
 
 ## See also
 

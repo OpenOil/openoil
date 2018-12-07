@@ -1,7 +1,8 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+/starter/node_modules
+/full/node_modules
 package-lock.json
 
 # testing
@@ -11,6 +12,8 @@ package-lock.json
 /build
 
 # misc
+.vs
+.vscode
 .DS_Store
 .idea
 .env.local

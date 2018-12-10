@@ -16,7 +16,7 @@ console.log("SRC_DIR", SRC_DIR);
 module.exports = (env = {}) => {
   return {
     entry: {
-      index: [SRC_DIR + "/index.js"]
+      index: [SRC_DIR + "/index.js"] //Changed from index.js
     },
     output: {
       path: BUILD_DIR,
@@ -31,7 +31,7 @@ module.exports = (env = {}) => {
       hot: true,
       open: true,
       proxy: {
-        "/api/": "http://localhost:8080"
+        "/api": "http://localhost:8080"
       }
     },
     module: {

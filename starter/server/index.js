@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const cors = require("cors");
 
 const config = require("../mongo.config");
 const isDev = process.env.NODE_ENV !== "production";
@@ -25,6 +26,8 @@ mongoose
   );
 
 const app = express();
+
+app.use(cors());
 
 app.use(passport.initialize());
 require("./passport")(passport);

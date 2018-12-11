@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const cors = require("cors");
 
-const config = require("../mongo.config");
+const config = require("../mongo");
 const isDev = process.env.NODE_ENV !== "production";
 const PORT = process.env.PORT || 8080;
 

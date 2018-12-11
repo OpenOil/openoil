@@ -123,7 +123,7 @@ class Login extends Component {
                           </Button>
                         </Col>
                         <Col xs="6" className="text-right">
-                          <Button color="link" className="px-0">
+                          <Button color="link" className="px-0" disabled>
                             Forgot password?
                           </Button>
                         </Col>

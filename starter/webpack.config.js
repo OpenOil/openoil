@@ -20,7 +20,8 @@ module.exports = (env = {}) => {
     },
     output: {
       path: BUILD_DIR,
-      filename: "[name].bundle.js"
+      filename: "[name].bundle.js",
+      publicPath: "/"
     },
     // watch: true,
     devtool: env.prod ? "source-map" : "cheap-module-eval-source-map",
@@ -30,6 +31,7 @@ module.exports = (env = {}) => {
       compress: true,
       hot: true,
       open: true,
+      historyApiFallback: true,
       proxy: {
         "/api": "http://localhost:8080"
       }
@@ -43,7 +45,8 @@ module.exports = (env = {}) => {
             loader: "babel-loader",
             options: {
               cacheDirectory: true,
-              presets: ["react", "env"]
+              presets: ["react", "env"],
+              plugins: ["transform-class-properties"]
             }
           }
         },

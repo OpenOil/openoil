@@ -5,20 +5,20 @@ const isEmpty = require("./is-empty");
 
 module.exports = function validateRegisterInput(data) {
   let errors = {};
-  data.name = !isEmpty(data.name) ? data.name : "";
+
+  // Check input values
   data.email = !isEmpty(data.email) ? data.email : "";
   data.password = !isEmpty(data.password) ? data.password : "";
   data.password_confirm = !isEmpty(data.password_confirm)
     ? data.password_confirm
     : "";
-
-  if (!Validator.isLength(data.name, { min: 2, max: 30 })) {
-    errors.name = "Name must be between 2 to 30 chars";
-  }
-
-  if (Validator.isEmpty(data.name)) {
-    errors.name = "Name field is required";
-  }
+  data.firstname = !isEmpty(data.firstname) ? data.firstname : "";
+  data.lastname = !isEmpty(data.lastname) ? data.lastname : "";
+  data.company = !isEmpty(data.company) ? data.company : "";
+  data.title = !isEmpty(data.title) ? data.title : "";
+  data.city = !isEmpty(data.city) ? data.city : "";
+  data.state = !isEmpty(data.state) ? data.state : "";
+  data.country = !isEmpty(data.country) ? data.country : "";
 
   if (!Validator.isEmail(data.email)) {
     errors.email = "Email is invalid";
@@ -41,11 +41,39 @@ module.exports = function validateRegisterInput(data) {
   }
 
   if (!Validator.equals(data.password, data.password_confirm)) {
-    errors.password_confirm = "Password and Confirm Password must match";
+    errors.password_confirm = "Passwords do not match";
   }
 
   if (Validator.isEmpty(data.password_confirm)) {
     errors.password_confirm = "Password is required";
+  }
+
+  if (Validator.isEmpty(data.firstname)) {
+    errors.firstname = "First Name field is required";
+  }
+
+  if (Validator.isEmpty(data.lastname)) {
+    errors.lastname = "Last Name field is required";
+  }
+
+  if (Validator.isEmpty(data.company)) {
+    errors.company = "Company field is required";
+  }
+
+  if (Validator.isEmpty(data.title)) {
+    errors.title = "Title field is required";
+  }
+
+  if (Validator.isEmpty(data.city)) {
+    errors.city = "City field is required";
+  }
+
+  if (Validator.isEmpty(data.state)) {
+    errors.state = "State field is required";
+  }
+
+  if (Validator.isEmpty(data.country)) {
+    errors.country = "Country field is required";
   }
 
   return {

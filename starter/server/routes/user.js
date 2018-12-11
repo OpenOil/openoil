@@ -31,9 +31,15 @@ router.post("/register", function(req, res) {
         d: "mm"
       });
       const newUser = new User({
-        name: req.body.name,
         email: req.body.email,
         password: req.body.password,
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        company: req.body.company,
+        title: req.body.title,
+        city: req.body.city,
+        state: req.body.state,
+        country: req.body.country,
         avatar
       });
 
@@ -74,7 +80,7 @@ router.post("/login", (req, res) => {
       if (isMatch) {
         const payload = {
           id: user.id,
-          name: user.name,
+          email: user.email,
           avatar: user.avatar
         };
         jwt.sign(
@@ -100,17 +106,5 @@ router.post("/login", (req, res) => {
     });
   });
 });
-
-router.get(
-  "/me",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    return res.json({
-      id: req.user.id,
-      name: req.user.name,
-      email: req.user.email
-    });
-  }
-);
 
 module.exports = router;

@@ -21,7 +21,7 @@ mongoose
       console.log("Database is connected");
     },
     err => {
-      console.log("Can not connect to the database" + err);
+      console.log("Cannot connect to the database" + err);
     }
   );
 
@@ -38,9 +38,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/users", users);
 app.use(express.static("build"));
 
-app.get("/", function(req, res) {
-  res.send("hello");
-});
+/* HANDLE cannot GET /URL error on refresh in production (current solution is modifying webpack)
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/build/index.html"), err => {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
+});*/
 
 app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}`);

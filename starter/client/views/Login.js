@@ -44,7 +44,6 @@ class Login extends Component {
     this.props.loginUser(user);
   };
 
-  /**/
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
       this.props.history.push("/");
@@ -53,7 +52,7 @@ class Login extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      this.props.history.push("/data");
     }
     if (nextProps.errors) {
       this.setState({

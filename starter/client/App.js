@@ -1,14 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
-// Redux Imports
-import { Provider } from "react-redux";
-import store from "./redux/store";
-import setAuthToken from "./redux/setAuthToken";
-import { setCurrentUser, logoutUser } from "./redux/actions/authActions";
-
-// JWT Auth Imports
-import jwt_decode from "jwt-decode";
+// Redux
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "./redux/actions/authActions";
 
 // Styles
 // Import Flag Icons Set
@@ -25,47 +21,46 @@ import "../scss/core/_dropdown-menu-right.scss";
 //CoreUI Icons
 import "@coreui/icons/scss/coreui-icons.scss";
 
-// Containers
-import Full from "./containers/Full";
+// Protected Views
+import Full from "./protected/Full";
 
-// Views
-//import Navbar from "./components/Navbar";
-//import Register from "./components/Register";
-//import Home from "./components/Login";
-//import Home from "./components/Home";
+// Public Views
 import Login from "./views/Login";
+import Logout from "./views/Logout";
 import Register from "./views/Register";
 import Page404 from "./views/Page404";
-import Logout from "./views/Logout";
-
-if (localStorage.jwtToken) {
-  setAuthToken(localStorage.jwtToken);
-  const decoded = jwt_decode(localStorage.jwtToken);
-  store.dispatch(setCurrentUser(decoded));
-
-  const currentTime = Date.now() / 1000;
-  if (decoded.exp < currentTime) {
-    store.dispatch(logoutUser());
-    window.location.href = "/login";
-  }
-}
 
 class App extends Component {
   render() {
+    //console.log(this.props);
     return (
-      <Provider store={store}>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/" component={Login} />
-            <Route path="/register" component={Register} />
-            <Route path="/logout" component={Logout} />
-            <Route path="/dashboard" component={Full} />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/logout" component={Logout} />
+          <Route path="/data" component={Full} />
+          {this.props.auth.isAuthenticated ? (
             <Route component={Full} />
-          </Switch>
-        </BrowserRouter>
-      </Provider>
+          ) : (
+            <Route component={Page404} />
+          )}
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
 
-export default App;
+App.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps,
+  { logoutUser }
+)(App);

@@ -5,7 +5,6 @@ import setAuthToken from "../setAuthToken";
 import jwt_decode from "jwt-decode";
 
 export const registerUser = (user, history) => dispatch => {
-  //console.log(user, history);
   axios
     .post("/api/users/register", user)
     .then(res => history.push("/"))
@@ -46,5 +45,5 @@ export const logoutUser = history => dispatch => {
   localStorage.removeItem("jwtToken");
   setAuthToken(false);
   dispatch(setCurrentUser({}));
-  history.push("/login");
+  history.push("/");
 };

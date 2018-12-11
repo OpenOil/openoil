@@ -5,7 +5,6 @@ const router = express.Router();
 const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const passport = require("passport");
 const validateRegisterInput = require("../validation/register");
 const validateLoginInput = require("../validation/login");
 
@@ -85,7 +84,7 @@ router.post("/login", (req, res) => {
         };
         jwt.sign(
           payload,
-          "secret",
+          "openoil secret",
           {
             expiresIn: 3600
           },

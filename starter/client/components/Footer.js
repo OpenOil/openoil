@@ -8,7 +8,7 @@ class Footer extends Component {
           <a href="http://OpenOil.org/">OpenOil</a> &copy; 2019 OpenOil.org
         </span>
         <span className="ml-auto">
-          Powered by <a href="http://RAREPETRO.com/">RARE PETRO</a>
+          <a href="" />
         </span>
       </footer>
     );

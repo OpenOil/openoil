@@ -1,9 +1,9 @@
 export default {
   items: [
     {
-      name: "Dashboard",
-      url: "/dashboard",
-      icon: "icon-speedometer",
+      name: "Data",
+      url: "/Data",
+      icon: "fa fa-database",
       badge: {
         variant: "info",
         text: "NEW"

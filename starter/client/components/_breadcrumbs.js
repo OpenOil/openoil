@@ -2,6 +2,6 @@
 
 const breadcrumbs = {
   "/": "Home",
-  "/dashboard": "Dashboard"
+  "/data": "Data"
 };
 export default breadcrumbs;

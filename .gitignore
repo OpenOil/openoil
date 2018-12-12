@@ -3,7 +3,8 @@
 # dependencies
 /starter/node_modules
 /full/node_modules
-package-lock.json
+/starter/package-lock.json
+/full/package-lock.json
 
 # testing
 /coverage

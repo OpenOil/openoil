@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const cors = require("cors");
+const path = require("path");
 
 const config = require("../mongo");
 const isDev = process.env.NODE_ENV !== "production";
@@ -36,7 +37,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/users", users);
-app.use(express.static("build"));
+app.use(express.static(path.join(__dirname, "build")));
 
 /* HANDLE cannot GET /URL error on refresh in production (current solution is modifying webpack)
 app.get("/*", (req, res) => {

@@ -90,7 +90,8 @@
     "dev": "webpack -d --progress --watch --profile --json > compilation-stats.json --env.dev",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "build": "webpack -p --progress --env.prod",
-    "clean": "rimraf ./build"
+    "clean": "rimraf ./build",
+    "prod": "concurrently \"npm run build\" \"pm2 start server/index.js\""
   },
   "engines": {
     "node": ">= 6.4.0",

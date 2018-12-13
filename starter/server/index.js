@@ -37,16 +37,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/users", users);
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, "/../build")));
 
-/* HANDLE cannot GET /URL error on refresh in production (current solution is modifying webpack)
+/* HANDLE cannot GET /URL error on refresh in production */
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/build/index.html"), err => {
+  res.sendFile(path.join(__dirname, "/../build/index.html"), err => {
     if (err) {
       res.status(500).send(err);
     }
   });
-});*/
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}`);

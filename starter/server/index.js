@@ -10,6 +10,7 @@ const isDev = process.env.NODE_ENV !== "production";
 const PORT = process.env.PORT || 8080;
 
 const users = require("./routes/user");
+const data = require("./routes/data");
 
 // Set up Mongoose
 mongoose
@@ -37,6 +38,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/users", users);
+app.use("/api/data", data);
+
 app.use(express.static(path.join(__dirname, "/../build")));
 
 /* HANDLE cannot GET /URL error on refresh in production */

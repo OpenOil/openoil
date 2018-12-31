@@ -129,7 +129,7 @@ class Login extends Component {
                         </Col>
                       </Row>
                     </CardBody>
-                    <CardBody className="text-center text-white bg-primary py-5 d-none d-md-block d-lg-none">
+                    <CardBody className="text-center text-white bg-primary py-5 d-lg-none d-xl-none">
                       <h2>Sign up</h2>
                       <ul class="list-group list-group-flush text-left">
                         <li class="list-group-item bg-transparent border-0">

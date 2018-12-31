@@ -17,7 +17,7 @@ router.post("/register", function(req, res) {
     return res.status(400).json(errors);
   }
   User.findOne({
-    email: req.body.email
+    email: req.body.email.toLowerCase()
   }).then(user => {
     if (user) {
       return res.status(400).json({
@@ -30,7 +30,7 @@ router.post("/register", function(req, res) {
         d: "mm"
       });
       const newUser = new User({
-        email: req.body.email,
+        email: req.body.email.toLowerCase(),
         password: req.body.password,
         firstname: req.body.firstname,
         lastname: req.body.lastname,

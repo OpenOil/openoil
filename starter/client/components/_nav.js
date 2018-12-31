@@ -2,7 +2,7 @@ export default {
   items: [
     {
       name: "Data",
-      url: "/Data",
+      url: "/data",
       icon: "fa fa-database",
       badge: {
         variant: "info",

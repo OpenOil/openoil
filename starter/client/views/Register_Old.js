@@ -151,8 +151,6 @@ class Register extends Component {
                         </div>
                       )}
                     </InputGroup>
-                  </CardBody>
-                  <CardFooter className="p-4">
                     <InputGroup className="mb-4">
                       <Input
                         type="text"
@@ -265,6 +263,20 @@ class Register extends Component {
                     <Button type="submit" color="success" block>
                       Create Account
                     </Button>
+                  </CardBody>
+                  <CardFooter className="p-4">
+                    <Row>
+                      <Col xs="12" sm="6">
+                        <Button className="btn-facebook" block>
+                          <span>facebook</span>
+                        </Button>
+                      </Col>
+                      <Col xs="12" sm="6">
+                        <Button className="btn-twitter" block>
+                          <span>twitter</span>
+                        </Button>
+                      </Col>
+                    </Row>
                   </CardFooter>
                 </Card>
               </Col>

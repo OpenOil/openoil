@@ -96,7 +96,8 @@
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "build": "webpack -p --progress --env.prod",
     "clean": "rimraf ./build",
-    "prod": "concurrently \"npm run build\" \"pm2 start server/index.js\""
+    "prod-start": "concurrently \"npm run build\" \"pm2 start server/index.js\"",
+    "prod-stop": "pm2 stop 0"
   },
   "engines": {
     "node": ">= 6.4.0",

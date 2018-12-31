@@ -129,20 +129,6 @@ class Login extends Component {
                         </Col>
                       </Row>
                     </CardBody>
-                    <CardBody className="text-center text-white bg-primary py-5 d-none d-md-block d-lg-none">
-                      <h2>Sign up</h2>
-                      <ul class="list-group list-group-flush text-left">
-                        <li class="list-group-item bg-transparent border-0">
-                          Montana (12/31/18)
-                        </li>
-                      </ul>
-                      <Link
-                        to="/register"
-                        className="btn btn-primary mt-3 active"
-                      >
-                        Register Now!
-                      </Link>
-                    </CardBody>
                   </Card>
                   <Card
                     className="text-white bg-primary py-5 d-md-down-none"
